@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamProvider<User>.value (
-      value: AuthService().user,
+      value: AuthService().user, // access user-stream on instance
           child: MaterialApp(
         home: HomePage(),
         routes: {

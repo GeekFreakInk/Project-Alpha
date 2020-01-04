@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: 'hjem',
+                text: 'Hjem',
               ),
               Tab(
                 text: 'Dine kurs',

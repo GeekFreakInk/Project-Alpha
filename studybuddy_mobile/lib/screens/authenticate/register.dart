@@ -26,56 +26,60 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         title: Text('sign up'),
       ),
-      body: Container(
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: <Widget>[
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: 'epost',
-                ),
-                validator: (value) => value.isEmpty ? 'ugyldig epost' : null,
-                onChanged: (value) {
-                  setState(() => email = value.trim());
-                },
-              ),
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: 'Passord',
-                ),
-                validator: (value) =>
-                    value.length < 6 ? 'ugyldig password' : null,
-                obscureText: true,
-                onChanged: (value) {
-                  setState(() => password = value.trim());
-                },
-              ),
-              RaisedButton(
-                child: Text('register'),
-                onPressed: () async {
-                  // do validation based on validator properties
-                  if (_formKey.currentState.validate()) {
-                    dynamic result = await _auth.registerWithEmailAndPassword(
-                        email, password);
-                    if (result == null) {
-                      setState(() => error = 'an error message');
-                    }
-                    // if result != null: direct to homepage automatically
-                  }
-                },
-              ),
-               
-               GestureDetector(
-                  onTap: () {
-                    widget.toggleView();
+      body: Padding(
+        padding: EdgeInsets.all(20),
+              child: Container(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: <Widget>[
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'email',
+                  ),
+                  validator: (value) => value.isEmpty ? 'ugyldig epost' : null,
+                  onChanged: (value) {
+                    setState(() => email = value.trim());
                   },
-                  child: Text(
-                    'signn in',
-                    style: TextStyle(decoration: TextDecoration.underline),
-                  )),
-              Text(error),
-            ],
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'password',
+                  ),
+                  validator: (value) =>
+                      value.length < 6 ? 'ugyldig password' : null,
+                  obscureText: true,
+                  onChanged: (value) {
+                    setState(() => password = value.trim());
+                  },
+                ),
+                SizedBox(height: 20,),
+                RaisedButton(
+                  child: Text('register'),
+                  onPressed: () async {
+                    // do validation based on validator properties
+                    if (_formKey.currentState.validate()) {
+                      dynamic result = await _auth.registerWithEmailAndPassword(
+                          email, password);
+                      if (result == null) {
+                        setState(() => error = 'registration failed');
+                      }
+                      // if result != null: direct to homepage automatically
+                    }
+                  },
+                ),
+                 
+                 GestureDetector(
+                    onTap: () {
+                      widget.toggleView();
+                    },
+                    child: Text(
+                      'sign in',
+                      style: TextStyle(decoration: TextDecoration.underline, color: Colors.blue),
+                    )),
+                Text(error),
+              ],
+            ),
           ),
         ),
       ),
