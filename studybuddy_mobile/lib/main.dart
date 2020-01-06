@@ -5,10 +5,10 @@ import 'app_localization.dart';
 
 import 'package:studybuddy_mobile/screens/home/homePage.dart';
 import 'package:studybuddy_mobile/screens/home/notification.dart';
-import 'package:studybuddy_mobile/screens/home/studyBuddy.dart';
-import 'package:studybuddy_mobile/screens/home/privateLessons.dart';
-import 'package:studybuddy_mobile/screens/home/userFeedback.dart';
-import 'package:studybuddy_mobile/screens/home/settings.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/studyBuddy.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/privateLessons.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/userFeedback.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/settings.dart';
 import 'package:studybuddy_mobile/screens/wrapper.dart';
 
 import 'package:studybuddy_mobile/services/auth.dart';
