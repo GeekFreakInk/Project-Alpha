@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:studybuddy_mobile/screens/home/homePage.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'app_localization.dart';
+
+import 'package:studybuddy_mobile/screens/home/homePage.dart';
 import 'package:studybuddy_mobile/screens/home/notification.dart';
+import 'package:studybuddy_mobile/screens/home/studyBuddy.dart';
+import 'package:studybuddy_mobile/screens/home/privateLessons.dart';
+import 'package:studybuddy_mobile/screens/home/userFeedback.dart';
+import 'package:studybuddy_mobile/screens/home/settings.dart';
 import 'package:studybuddy_mobile/screens/wrapper.dart';
+
 import 'package:studybuddy_mobile/services/auth.dart';
 import 'package:studybuddy_mobile/models/user.dart';
 
@@ -19,8 +27,34 @@ class App extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/profile': (context) => Wrapper(),
         '/notis': (context) => Notis(),
-        
-      }
+        '/settings' : (context) => Settings(),
+        '/feedback' : (context) => UserFeedback(),
+        '/studyBuddy' : (context) => StudyBuddy(),
+        '/privateLessons' : (context) => PrivateLessons(),
+        },
+        /*
+        supportedLocales: [
+          const Locale('en', 'US'), // English
+          const Locale('nb', 'NO'), // Norwegian
+          //const Locale.fromSubtags(languageCode: 'zh'), // Chinese *See Advanced Locales below*
+        ],
+        localizationsDelegates: [
+          //AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],  
+        localeResolutionCallback: (locale, supportedLocales){
+            if (locale != null){
+              for (var supportedLocale in supportedLocales){
+              if (supportedLocale.languageCode == locale.languageCode &&
+              supportedLocale.countryCode == locale.countryCode){
+                return supportedLocale;
+              } 
+            }
+            return supportedLocales.first;
+          }
+        },
+        */
       ),
     );
   }
