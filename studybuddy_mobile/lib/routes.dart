@@ -33,9 +33,9 @@ class Router {
       );
     }
   }
-  //TODO 
-  static Route<dynamic> generateSettingsRoute(RouteSettings settings) {  }
-  static Route<dynamic> generateExploreRoute(RouteSettings settings) {  }
+  
+  //static Route<dynamic> generateSettingsRoute(RouteSettings settings) {  }
+  //static Route<dynamic> generateExploreRoute(RouteSettings settings) {  }
 }
   
 
