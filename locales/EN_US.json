@@ -1,0 +1,37 @@
+{
+  "main": {
+    "home": "Home",
+    "course": "Your courses",
+    "studyBuddies": "StudyBuddies",
+    "privateLessons": "Private Lessons",
+    "settings": "Settings",
+    "feedback": "Send feedback"
+  },
+
+  "filters": {},
+  "courses": {
+    "math": "Math",
+    "languages": "Languages"
+  },
+
+  "chat_vocabulary": {},
+  "settings": {},
+  "payments": {},
+  "register_user": {},
+  "teacher_profile": {},
+  "student_profile": {},
+  "user_preferences": {},
+
+  "time_format": {
+    "sec": "sec",
+    "seconds": "seconds",
+    "min": "min",
+    "minutes": "minutes",
+    "h": "h",
+    "hours": "hours",
+    "days": "days",
+    "weeks": "weeks",
+    "months": "months",
+    "years": "years"
+  }
+}

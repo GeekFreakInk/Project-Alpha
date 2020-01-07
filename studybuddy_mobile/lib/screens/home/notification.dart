@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import '../../app_localization.dart';
 
 class Notis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Notifikasjon'),
+          title: Text(AppLocalizations.of(context).translate('notifications')),
         ),
         body: Container(
             child: Center(

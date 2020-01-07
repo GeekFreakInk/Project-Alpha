@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../shared/constants.dart';
+import 'package:studybuddy_mobile/app_localization.dart';
 
 class NavigationDrawer extends StatelessWidget {
   @override
@@ -15,18 +17,18 @@ class NavigationDrawer extends StatelessWidget {
               ListTile(
                 //if already on home, just pull back drawer
                 leading: Icon(Icons.home),
-                title: Text('Hjem'),
-                onTap: () => Navigator.pushNamed(context, '/home'),
+                title: Text(AppLocalizations.of(context).translate("home")),
+                onTap: () => Navigator.pushNamed(context, homeRoute),
               ),
               ListTile(
                 leading: Icon(Icons.group),
-                title: Text('Finn studybuddy'),
-                onTap: () => Navigator.pushNamed(context, '/studyBuddy'),
+                title: Text(AppLocalizations.of(context).translate("find_sb")),
+                onTap: () => Navigator.pushNamed(context, studyBuddyRoute),
               ),
               ListTile(
                 leading: Icon(Icons.school),
-                title: Text('Privatundervisning'),
-                onTap: () => Navigator.pushNamed(context, '/privateLessons'),
+                title: Text(AppLocalizations.of(context).translate("privateLessons")),
+                onTap: () => Navigator.pushNamed(context, privateLessonsRoute),
               ),
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
               Align(
@@ -37,31 +39,30 @@ class NavigationDrawer extends StatelessWidget {
               )),
               ListTile(
                 leading: Icon(Icons.category),
-                title: Text('Matte'),
+                title: Text(AppLocalizations.of(context).translate("math")),
                 //onTap: () => Navigator.pushNamed(context, '/'),
               ),
               Container(
                 color: Colors.grey[200],
                 child: ListTile(
                   leading: Icon(Icons.language),
-                  title: Text('Språk'),
+                  title: Text(AppLocalizations.of(context).translate("languages")),
                   trailing: Icon(Icons.keyboard_arrow_right),
-                  //This should change according to state, for now it just 
-                  //demostrates the capability
+                  //This should change according to state
                   selected: true,
                   //onTap: () => Navigator.pushNamed(context, '/'),
                 )),
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
               ListTile(
                 leading: Icon(Icons.settings),
-                title: Text('Instillinger'),
-                onTap: () => Navigator.pushNamed(context, '/settings'),                
+                title: Text(AppLocalizations.of(context).translate("settings")),
+                onTap: () => Navigator.pushNamed(context, settingsRoute),                
               ),
              
               ListTile(
                 leading: Icon(Icons.feedback),
-                title: Text('Send tilbakemelding'),
-                onTap: () => Navigator.pushNamed(context, '/feedback'),
+                title: Text(AppLocalizations.of(context).translate("feedback")),
+                onTap: () => Navigator.pushNamed(context, feedbackRoute),
               )
             ],
           ),

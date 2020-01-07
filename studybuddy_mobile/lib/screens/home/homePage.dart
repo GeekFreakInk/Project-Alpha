@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../shared/constants.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
-import 'package:studybuddy_mobile/navigationHeader/navigationDrawer.dart';
+import 'package:studybuddy_mobile/screens/navigationHeader/navigationDrawer.dart';
 import 'containers/home.dart';
 import 'containers/studybuddies.dart';
 import 'containers/courses.dart';
@@ -8,7 +9,6 @@ import 'containers/courses.dart';
 class HomePage extends StatelessWidget {
   // Will be displayed when the corresponding tab gets selected
   final List<Widget> containers = [
-    //Make the containers in seperate dart files
     Container(
         child: Home()),
     Container(
@@ -24,18 +24,18 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         drawer: NavigationDrawer(),
         appBar: AppBar(
-          title: Text("Hjem"),//Text(AppLocalizations.of(context).translate('test')),
+          title: Text(AppLocalizations.of(context).translate('home')),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.notifications),
               onPressed: () {
-                Navigator.pushNamed(context, '/notis');
+                Navigator.pushNamed(context, notisRoute);
               },
             ),
             IconButton(
               icon: Icon(Icons.person),
               onPressed: () {
-                Navigator.pushNamed(context, '/profile');
+                Navigator.pushNamed(context, profileRoute);
               
               },
             ),
@@ -43,13 +43,13 @@ class HomePage extends StatelessWidget {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: 'Hjem',
+                text: AppLocalizations.of(context).translate('home'),
               ),
               Tab(
-                text: 'Dine kurs',
+                text: AppLocalizations.of(context).translate('course'),
               ),
               Tab(
-                text: 'Studybuddies',
+                text: AppLocalizations.of(context).translate('studyBuddies'),
               )
             ],
           ),
