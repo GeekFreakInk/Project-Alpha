@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         drawer: NavigationDrawer(),
         appBar: AppBar(
-          title: Text(AppLocalizations.of(context).translate('home')),
+          title: Text(AppLocalizations.of(context).translate("time_format","years")),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.notifications),
@@ -43,13 +43,13 @@ class HomePage extends StatelessWidget {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: AppLocalizations.of(context).translate('home'),
+                text: 'placeholder',//AppLocalizations.of(context).translate('main','home'),
               ),
               Tab(
-                text: AppLocalizations.of(context).translate('course'),
+                text: 'placeholder',//AppLocalizations.of(context).translate('course'),
               ),
               Tab(
-                text: AppLocalizations.of(context).translate('studyBuddies'),
+                text: 'placeholder',//AppLocalizations.of(context).translate('studyBuddies'),
               )
             ],
           ),

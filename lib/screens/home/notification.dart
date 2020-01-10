@@ -6,7 +6,7 @@ class Notis extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(AppLocalizations.of(context).translate('notifications')),
+          title: Text('placeholder'),//Text(AppLocalizations.of(context).translate('notifications')),
         ),
         body: Container(
             child: Center(

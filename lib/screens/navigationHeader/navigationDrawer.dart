@@ -17,17 +17,17 @@ class NavigationDrawer extends StatelessWidget {
               ListTile(
                 //if already on home, just pull back drawer
                 leading: Icon(Icons.home),
-                title: Text(AppLocalizations.of(context).translate("home")),
+                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("home")),
                 onTap: () => Navigator.pushNamed(context, homeRoute),
               ),
               ListTile(
                 leading: Icon(Icons.group),
-                title: Text(AppLocalizations.of(context).translate("find_sb")),
+                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("find_sb")),
                 onTap: () => Navigator.pushNamed(context, studyBuddyRoute),
               ),
               ListTile(
                 leading: Icon(Icons.school),
-                title: Text(AppLocalizations.of(context).translate("privateLessons")),
+                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("privateLessons")),
                 onTap: () => Navigator.pushNamed(context, privateLessonsRoute),
               ),
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
@@ -39,14 +39,14 @@ class NavigationDrawer extends StatelessWidget {
               )),
               ListTile(
                 leading: Icon(Icons.category),
-                title: Text(AppLocalizations.of(context).translate("math")),
+                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("math")),
                 //onTap: () => Navigator.pushNamed(context, '/'),
               ),
               Container(
                 color: Colors.grey[200],
                 child: ListTile(
                   leading: Icon(Icons.language),
-                  title: Text(AppLocalizations.of(context).translate("languages")),
+                  title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("languages")),
                   trailing: Icon(Icons.keyboard_arrow_right),
                   //This should change according to state
                   selected: true,
@@ -55,13 +55,13 @@ class NavigationDrawer extends StatelessWidget {
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
               ListTile(
                 leading: Icon(Icons.settings),
-                title: Text(AppLocalizations.of(context).translate("settings")),
+                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("settings")),
                 onTap: () => Navigator.pushNamed(context, settingsRoute),                
               ),
              
               ListTile(
                 leading: Icon(Icons.feedback),
-                title: Text(AppLocalizations.of(context).translate("feedback")),
+                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("feedback")),
                 onTap: () => Navigator.pushNamed(context, feedbackRoute),
               )
             ],

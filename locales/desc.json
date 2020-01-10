@@ -1,4 +1,11 @@
 {
+  "chat_vocabulary": {},
+  "courses": {
+    "math": "Math is about numbers",
+    "languages": "Languages is for understanding people",
+    "computer_science": "computer science course"
+  },
+  "filters": {},
   "main": {
     "home": "This is home description",
     "course": "Your courses",
@@ -7,21 +14,11 @@
     "settings": "this is the settings page",
     "feedback": "send your feedback to us"
   },
-
-  "filters": {},
-  "courses": {
-    "math": "Math is about numbers",
-    "languages": "Languages is for understanding people"
-  },
-  
-  "chat_vocabulary": {},
-  "settings": {},
   "payments": {},
   "register_user": {},
-  "teacher_profile": {},
+  "settings": {},
   "student_profile": {},
-  "user_preferences": {},
-
+  "teacher_profile": {},
   "time_format": {
     "sec": "amount of seconds",
     "seconds": "amount of seconds (non abri.)",
@@ -33,5 +30,6 @@
     "weeks": "amount of weeks",
     "months": "amount of months",
     "years": "amount of years"
-  }
+  },
+  "user_preferences": {}
 }

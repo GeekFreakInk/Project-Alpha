@@ -15,22 +15,27 @@ class AppLocalizations {
   static const LocalizationsDelegate<AppLocalizations> delegate =
   _AppLocalizationsDelegate();
 
-  Map<String, String> _localizedStrings;
+  Map<String, String> _locallizedGroups;
+  Map<dynamic, dynamic> _localizedStrings;
 
   Future<bool> load() async {
     String jsonString =
       await rootBundle.loadString('locales/${locale.languageCode}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
-
-    _localizedStrings = jsonMap.map((key, value){
-      return MapEntry(key, value.toString());
-    });
-
+    
+      _locallizedGroups = jsonMap.map((group, keys){
+       _localizedStrings = jsonMap[group].map((key, value){
+         return MapEntry(key, value);
+       });
+       return MapEntry(group, keys.toString());
+     });
     return true;
   }
-
-  String translate(String key) {
-    return _localizedStrings[key];
+  
+  String translate(String groups, String key) {
+    var group = _locallizedGroups[groups]; 
+    var string = _localizedStrings[key];
+    return string;
   }
 }
 

@@ -1,4 +1,11 @@
 {
+  "chat_vocabulary": {},
+  "courses": {
+    "math": "Math",
+    "languages": "Languages",
+    "computer_science": "Computer Science"
+  },
+  "filters": {},
   "main": {
     "home": "Home",
     "course": "Your courses",
@@ -7,21 +14,11 @@
     "settings": "Settings",
     "feedback": "Send feedback"
   },
-
-  "filters": {},
-  "courses": {
-    "math": "Math",
-    "languages": "Languages"
-  },
-
-  "chat_vocabulary": {},
-  "settings": {},
   "payments": {},
   "register_user": {},
-  "teacher_profile": {},
+  "settings": {},
   "student_profile": {},
-  "user_preferences": {},
-
+  "teacher_profile": {},
   "time_format": {
     "sec": "sec",
     "seconds": "seconds",
@@ -33,5 +30,6 @@
     "weeks": "weeks",
     "months": "months",
     "years": "years"
-  }
+  },
+  "user_preferences": {}
 }
