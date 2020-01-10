@@ -17,7 +17,7 @@ class NavigationDrawer extends StatelessWidget {
               ListTile(
                 //if already on home, just pull back drawer
                 leading: Icon(Icons.home),
-                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("home")),
+                title: Text(AppLocalizations.of(context).translate("main","home")),
                 onTap: () => Navigator.pushNamed(context, homeRoute),
               ),
               ListTile(
@@ -27,7 +27,7 @@ class NavigationDrawer extends StatelessWidget {
               ),
               ListTile(
                 leading: Icon(Icons.school),
-                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("privateLessons")),
+                title: Text(AppLocalizations.of(context).translate("main","privateLessons")),
                 onTap: () => Navigator.pushNamed(context, privateLessonsRoute),
               ),
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
@@ -39,14 +39,14 @@ class NavigationDrawer extends StatelessWidget {
               )),
               ListTile(
                 leading: Icon(Icons.category),
-                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("math")),
+                title: Text(AppLocalizations.of(context).translate("courses","math")),
                 //onTap: () => Navigator.pushNamed(context, '/'),
               ),
               Container(
                 color: Colors.grey[200],
                 child: ListTile(
                   leading: Icon(Icons.language),
-                  title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("languages")),
+                  title: Text(AppLocalizations.of(context).translate("courses","languages")),
                   trailing: Icon(Icons.keyboard_arrow_right),
                   //This should change according to state
                   selected: true,
@@ -55,13 +55,13 @@ class NavigationDrawer extends StatelessWidget {
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
               ListTile(
                 leading: Icon(Icons.settings),
-                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("settings")),
+                title: Text(AppLocalizations.of(context).translate("main","settings")),
                 onTap: () => Navigator.pushNamed(context, settingsRoute),                
               ),
              
               ListTile(
                 leading: Icon(Icons.feedback),
-                title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("feedback")),
+                title: Text(AppLocalizations.of(context).translate("main","feedback")),
                 onTap: () => Navigator.pushNamed(context, feedbackRoute),
               )
             ],

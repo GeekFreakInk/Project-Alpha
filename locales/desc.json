@@ -1,11 +1,5 @@
 {
-  "chat_vocabulary": {},
-  "courses": {
-    "math": "Math is about numbers",
-    "languages": "Languages is for understanding people",
-    "computer_science": "computer science course"
-  },
-  "filters": {},
+
   "main": {
     "home": "This is home description",
     "course": "Your courses",
@@ -14,6 +8,13 @@
     "settings": "this is the settings page",
     "feedback": "send your feedback to us"
   },
+  "chat_vocabulary": {},
+  "courses": {
+    "math": "Math is about numbers",
+    "languages": "Languages is for understanding people",
+    "computer_science": "computer science course"
+  },
+  "filters": {},
   "payments": {},
   "register_user": {},
   "settings": {},

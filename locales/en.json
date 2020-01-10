@@ -1,19 +1,19 @@
 {
+  "main": {
+    "home": "Home",
+    "course": "Yourcourses",
+    "studyBuddies": "StudyBuddies",
+    "privateLessons": "PrivateLessons",
+    "settings": "Settings",
+    "feedback": "Sendfeedback"
+  },
   "chat_vocabulary": {},
   "courses": {
     "math": "Math",
     "languages": "Languages",
-    "computer_science": "Computer Science"
+    "computer_science": "ComputerScience"
   },
   "filters": {},
-  "main": {
-    "home": "Home",
-    "course": "Your courses",
-    "studyBuddies": "StudyBuddies",
-    "privateLessons": "Private Lessons",
-    "settings": "Settings",
-    "feedback": "Send feedback"
-  },
   "payments": {},
   "register_user": {},
   "settings": {},

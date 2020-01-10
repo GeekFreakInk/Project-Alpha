@@ -1,19 +1,19 @@
 {
-  "chat_vocabulary": {},
-  "courses": {
-    "math": "Matte",
-    "languages": "Språk",
-    "computer_science": "Informatikk"
-  },
-  "filters": {},
   "main": {
     "home": "Hjem",
-    "course": "Dine kurs",
+    "course": "Dinekurs",
     "studyBuddies": "StudyBuddies",
     "privateLessons": "Privatundervisning",
     "settings": "Instillinger",
-    "feedback": "Send tilbakemelding"
+    "feedback": "Sendtilbakemelding"
   },
+  "chat_vocabulary": {},
+  "courses": {
+    "math": "Matte",
+    "languages": "Sprok",
+    "computer_science": "Informatikk"
+  },
+  "filters": {},
   "payments": {},
   "register_user": {},
   "settings": {},
@@ -28,8 +28,8 @@
     "hours": "timer",
     "days": "dager",
     "weeks": "uker",
-    "months": "måneder",
-    "years": "år"
+    "months": "moneder",
+    "years": "or"
   },
   "user_preferences": {}
 }
