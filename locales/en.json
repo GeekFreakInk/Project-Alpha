@@ -1,35 +1,35 @@
 {
-  "main": {
-    "home": "Home",
-    "course": "Yourcourses",
-    "studyBuddies": "StudyBuddies",
-    "privateLessons": "PrivateLessons",
-    "settings": "Settings",
-    "feedback": "Sendfeedback"
-  },
   "chat_vocabulary": {},
   "courses": {
-    "math": "Math",
-    "languages": "Languages",
-    "computer_science": "ComputerScience"
+    "math_": "Math",
+    "languages_": "Languages",
+    "computerScience_": "Computer Science"
   },
   "filters": {},
+  "main": {
+    "home_": "Home",
+    "course_": "Your courses",
+    "studyBuddies_": "StudyBuddies",
+    "privateLessons_": "Private Lessons",
+    "settings_": "Settings",
+    "feedback_": "Send feedback"
+  },
   "payments": {},
   "register_user": {},
   "settings": {},
   "student_profile": {},
   "teacher_profile": {},
   "time_format": {
-    "sec": "sec",
-    "seconds": "seconds",
-    "min": "min",
-    "minutes": "minutes",
-    "h": "h",
-    "hours": "hours",
-    "days": "days",
-    "weeks": "weeks",
-    "months": "months",
-    "years": "years"
+    "sec_": "sec",
+    "seconds_": "seconds",
+    "min_": "min",
+    "minutes_": "minutes",
+    "h_": "h",
+    "hours_": "hours",
+    "days_": "days",
+    "weeks_": "weeks",
+    "months_": "months",
+    "years_": "years"
   },
   "user_preferences": {}
 }

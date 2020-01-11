@@ -22,23 +22,24 @@ class AppLocalizations {
     String jsonString =
       await rootBundle.loadString('locales/${locale.languageCode}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
-
     
-      _localizedStrings = jsonMap.map((group, keys){
-        return MapEntry(group, keys.toString());
-     });
+    _localizedStrings = jsonMap.map((key, value){
+      return MapEntry(key, value.toString());
+    });
     return true;
   }
+
   static String returnJsonString(data){
-    final keyConversion = data.replaceAllMapped(RegExp(r'\b\w+\b'), (match){
+  
+    var keyConversion = data.replaceAllMapped(RegExp(r'\b[\p{L}*\s*]*[^:|^,]\b', unicode : true), (match){
       return '"${match.group(0)}"';
     });
+
     return keyConversion;
   }
-  
   String translate(String groups, String key) {
-     var group = _localizedStrings[groups]; 
-     var jsonString = returnJsonString(group);
+     var rawString = _localizedStrings[groups]; 
+     var jsonString = returnJsonString(rawString);
      return jsonDecode(jsonString)[key];
   }
 }
