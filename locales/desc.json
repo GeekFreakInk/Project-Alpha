@@ -6,14 +6,6 @@
     "computerScience_": "computer science course"
   },
   "filters": {},
-  "main": {
-    "home_": "This is home description",
-    "course_": "Your courses",
-    "studyBuddies_": "Your studyBuddies",
-    "privateLessons_": "Available private lessons",
-    "settings_": "this is the settings page",
-    "feedback_": "send your feedback to us"
-  },
   "payments": {},
   "register_user": {},
   "settings": {},
@@ -31,5 +23,15 @@
     "months_": "amount of months",
     "years_": "amount of years"
   },
-  "user_preferences": {}
+  "user_preferences": {},
+  "main": {
+    "home_": "Home",
+    "course_": "Your courses",
+    "studyBuddies_": "StudyBuddies",
+    "privateLessons_": "Private Lessons",
+    "settings_": "Settings",
+    "feedback_": "Send feedback",
+    "findSb_": "Find StudyBuddies",
+    "notifications_": "Notifications"
+  }
 }

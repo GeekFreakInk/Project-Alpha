@@ -6,14 +6,6 @@
     "computerScience_": "Informatikk"
   },
   "filters": {},
-  "main": {
-    "home_": "Hjem",
-    "course_": "Dine kurs",
-    "studyBuddies_": "StudyBuddies",
-    "privateLessons_": "Privatundervisning",
-    "settings_": "Instillinger",
-    "feedback_": "Send tilbakemelding"
-  },
   "payments": {},
   "register_user": {},
   "settings": {},
@@ -31,5 +23,15 @@
     "months_": "måneder",
     "years_": "år"
   },
-  "user_preferences": {}
+  "user_preferences": {},
+  "main": {
+    "home_": "Dzień dobry",
+    "course_": "أسبوع",
+    "studyBuddies_": "Do widzenia",
+    "privateLessons_": "أسبوع",
+    "settings_": "数学",
+    "feedback_": "おねがい します",
+    "findSb_": "Finn StudyBuddies",
+    "notifications_": "すみません"
+  }
 }
