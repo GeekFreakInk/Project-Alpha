@@ -16,7 +16,7 @@ class AppLocalizations {
   static const LocalizationsDelegate<AppLocalizations> delegate =
   _AppLocalizationsDelegate();
 
-  
+  Map<dynamic, dynamic> _localizedGroup;
   Map<dynamic, dynamic> _localizedStrings;
   
   Future<bool> load() async {
@@ -25,7 +25,7 @@ class AppLocalizations {
     Map<String, dynamic> jsonMap = json.decode(jsonString);
     
   
-    jsonMap.map((group, keys){
+    _localizedGroup = jsonMap.map((group, keys){
       _localizedStrings = jsonMap[group].map((key, value){
         return MapEntry(key, value);
       });
@@ -33,7 +33,7 @@ class AppLocalizations {
     });
     return true;
   }
-  String translate(String groups, String key) {
+  String translate(String key) {
     return _localizedStrings[key]; 
   }
 }
@@ -45,7 +45,7 @@ class _AppLocalizationsDelegate
 
     @override
     bool isSupported(Locale locale){
-      return ['en', 'nb'].contains(locale.languageCode);
+      return ['en', 'nb','zh','pl','nl'].contains(locale.languageCode);
     }
 
     @override

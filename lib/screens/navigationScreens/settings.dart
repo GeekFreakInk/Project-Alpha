@@ -6,7 +6,7 @@ class Settings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("settings")),
+          title: Text(AppLocalizations.of(context).translate("settings_")),
         ),
         body: Container(
             child: Center(

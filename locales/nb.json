@@ -1,37 +1,14 @@
 {
-  "chat_vocabulary": {},
-  "courses": {
-    "math_": "Matte",
-    "languages_": "Språk",
-    "computerScience_": "Informatikk"
-  },
-  "filters": {},
-  "payments": {},
-  "register_user": {},
-  "settings": {},
-  "student_profile": {},
-  "teacher_profile": {},
-  "time_format": {
-    "sec_": "sek",
-    "seconds_": "sekunder",
-    "min_": "min",
-    "minutes_": "minutter",
-    "h_": "t",
-    "hours_": "timer",
-    "days_": "dager",
-    "weeks_": "uker",
-    "months_": "måneder",
-    "years_": "år"
-  },
-  "user_preferences": {},
   "main": {
-    "home_": "Dzień dobry",
-    "course_": "أسبوع",
-    "studyBuddies_": "Do widzenia",
-    "privateLessons_": "أسبوع",
-    "settings_": "数学",
-    "feedback_": "おねがい します",
-    "findSb_": "Finn StudyBuddies",
-    "notifications_": "すみません"
+    "home_": "Hjem",
+    "course_": "Dine kurs",
+    "studyBuddies_": "StudyBuddies",
+    "privateLessons_": "Privatundervisning",
+    "settings_": "Instillinger",
+    "feedback_": "Send tilbakemelding",
+    "findSB_": "Finn StudyBuddies",
+    "notifications_": "Notifikasjoner",
+    "math_": "Matte",
+    "languages_": "Språk"
   }
 }

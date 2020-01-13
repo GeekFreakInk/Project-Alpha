@@ -51,6 +51,9 @@ flutter:
   assets:
     - locales/en.json
     - locales/nb.json
+    - locales/zh.json
+    - locales/pl.json
+    - locales/nl.json
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

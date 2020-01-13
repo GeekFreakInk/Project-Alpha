@@ -1,29 +1,4 @@
 {
-  "chat_vocabulary": {},
-  "courses": {
-    "math_": "Math",
-    "languages_": "Languages",
-    "computerScience_": "Computer Science"
-  },
-  "filters": {},
-  "payments": {},
-  "register_user": {},
-  "settings": {},
-  "student_profile": {},
-  "teacher_profile": {},
-  "time_format": {
-    "sec_": "sec",
-    "seconds_": "seconds",
-    "min_": "min",
-    "minutes_": "minutes",
-    "h_": "h",
-    "hours_": "hours",
-    "days_": "days",
-    "weeks_": "weeks",
-    "months_": "months",
-    "years_": "years"
-  },
-  "user_preferences": {},
   "main": {
     "home_": "Home",
     "course_": "Your courses",
@@ -31,7 +6,9 @@
     "privateLessons_": "Private Lessons",
     "settings_": "Settings",
     "feedback_": "Send feedback",
-    "findSb_": "Find StudyBuddies",
-    "notifications_": "Notifications"
+    "findSB_": "Find StudyBuddies",
+    "notifications_": "Notifications",
+    "math_": "Math",
+    "languages_": "Languages"
   }
 }

@@ -6,7 +6,7 @@ class PrivateLessons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('placeholder'),//Text(AppLocalizations.of(context).translate("privateLessons")),
+          title: Text(AppLocalizations.of(context).translate("privateLessons_")),
         ),
         body: Container(
             child: Center(

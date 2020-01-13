@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         drawer: NavigationDrawer(),
         appBar: AppBar(
-          title: Text(AppLocalizations.of(context).translate("main","home_")),
+          title: Text(AppLocalizations.of(context).translate("home_")),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.notifications),
@@ -43,13 +43,13 @@ class HomePage extends StatelessWidget {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: AppLocalizations.of(context).translate('main','home_'),
+                text: AppLocalizations.of(context).translate("home_"),
               ),
               Tab(
-                text: AppLocalizations.of(context).translate("main",'course_'),
+                text: AppLocalizations.of(context).translate("course_"),
               ),
               Tab(
-                text: AppLocalizations.of(context).translate("main",'studyBuddies_'),
+                text: AppLocalizations.of(context).translate("studyBuddies_"),
               )
             ],
           ),

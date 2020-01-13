@@ -1,29 +1,4 @@
 {
-  "chat_vocabulary": {},
-  "courses": {
-    "math_": "Math is about numbers",
-    "languages_": "Languages is for understanding people",
-    "computerScience_": "computer science course"
-  },
-  "filters": {},
-  "payments": {},
-  "register_user": {},
-  "settings": {},
-  "student_profile": {},
-  "teacher_profile": {},
-  "time_format": {
-    "sec_": "amount of seconds",
-    "seconds_": "amount of seconds (non abri.)",
-    "min_": "amount of minutes",
-    "minutes_": "amount of minutes(non abri.)",
-    "h_": "amount of hours",
-    "hours_": "amount of hours (non abri.)",
-    "days_": "amount of days",
-    "weeks_": "amount of weeks",
-    "months_": "amount of months",
-    "years_": "amount of years"
-  },
-  "user_preferences": {},
   "main": {
     "home_": "Home",
     "course_": "Your courses",
@@ -31,7 +6,9 @@
     "privateLessons_": "Private Lessons",
     "settings_": "Settings",
     "feedback_": "Send feedback",
-    "findSb_": "Find StudyBuddies",
-    "notifications_": "Notifications"
+    "findSB_": "Find StudyBuddies",
+    "notifications_": "Notifications",
+    "math_": "This is Math",
+    "languages_": "Languages"
   }
 }

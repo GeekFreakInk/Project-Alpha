@@ -21,6 +21,9 @@ class App extends StatelessWidget {
         supportedLocales: [
           const Locale('en', 'US'), // English
           const Locale('nb', 'NO'), // Norwegian
+          const Locale('zh', 'CN'), // Chinese
+          const Locale('pl', 'PL'), // Polish
+          const Locale('nl', 'NL'), // Polish
           //const Locale.fromSubtags(languageCode: 'zh'), // Chinese *See Advanced Locales below*
         ],
         
