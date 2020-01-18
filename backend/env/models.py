@@ -7,20 +7,21 @@ from flask_sqlalchemy import SQLAlchemy
 ma = Marshmallow()
 db = SQLAlchemy()
 
-
 class User(db.Model):
+
     __tablename__ = 'users'
-    __table_args__ = tuple(db.uniqueConstraint("id", "username", name = "my_2uniq"))
     
     id = db.Column(db.String(), primary_key=True)
     apiKey = db.Column(db.String())
-    username = db.Column(db.String(), unique=True)
+    email = db.Column(db.String(), unique=True)
+    userName = db.Column(db.String(), unique=True)
     isTeacher = db.Column(db.Boolean(), default=False)
 
-    def __init__(self, id, apiKey, username, isTeacher):
-        self.id = id
+    def __init__(self, id, apiKey, email, userName, isTeacher):
+        self.id = id,
         self.apiKey = apiKey
-        self.username = username
+        self.email = email
+        self.userName = userName
         self.isTeacher = isTeacher
 
     def __repr__(self):
@@ -29,7 +30,9 @@ class User(db.Model):
     def serialize(self):
         return{
             "id" : self.id,
-            "api_Key" : self.apiKey,
-            "username" : self.username,
+            "apiKey" : self.apiKey,
+            "email" : self.email,
+            "userName" : self.userName,
             "isTeacher" : self.isTeacher
         }
+
