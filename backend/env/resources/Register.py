@@ -1,7 +1,8 @@
 from flask_restful import Resource
 from flask import request
 from models import db, User
-
+import random
+import string
 
 class Register(Resource):
 
@@ -14,29 +15,18 @@ class Register(Resource):
     def post(self):
         json_data = request.get_json(force=True)
         if not json_data:
-            return { "message" : "No input data provided"}, 400
-        
-        user = User.query.filter_by(userName=json_data['userName']).first()
+            return { "message" : "No input data provided"}, 400 
+        user = User.query.filter_by(id=json_data['id']).first()
         if user:
             return {'message': 'User already exists'}, 400
-        
-        id = json_data["id"]
-        apiKey = json_data["apiKey"]
-        email = json_data["email"]
-        userName = json_data["userName"]
-        isTeacher = json_data["isTeacher"]
-
         user = User(
             id = json_data["id"],
-            apiKey = json_data["apiKey"],
-            email=json_data["email"],
             userName=json_data["userName"],
             isTeacher=json_data["isTeacher"]
         )
         db.session.add(user)
         db.session.commit()
-
-        result = User.dump(user)
-
+        result = User.serialize(user)
         return { "status": 'success', 'data': result }, 201
+        
         
