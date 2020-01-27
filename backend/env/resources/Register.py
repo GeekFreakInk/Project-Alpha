@@ -22,8 +22,10 @@ class Register(Resource):
         user = User(
             id = json_data["id"],
             userName=json_data["userName"],
-            isTeacher=json_data["isTeacher"]
+            isTeacher=json_data["isTeacher"],
+            isAdmin=json_data["isAdmin"]
         )
+        
         db.session.add(user)
         db.session.commit()
         result = User.serialize(user)

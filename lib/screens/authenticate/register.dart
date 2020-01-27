@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:studybuddy_mobile/services/auth.dart';
+import '../../services/usersAPI.dart';
 
 class Register extends StatefulWidget {
   // accept toggleView from authenticate.dart
@@ -72,8 +73,7 @@ class _RegisterState extends State<Register> {
                       // if result != null: direct to homepage automatically
                     }
                   },
-                ),
-                 
+                ),                 
                  GestureDetector(
                     onTap: () {
                       widget.toggleView();
@@ -89,22 +89,5 @@ class _RegisterState extends State<Register> {
         ),
       ),
     );
-  }
-
-  Future registerUser(user) async{
-    var url = "http://10.0.2.2:5000/api/register";
-    Map body = {
-      "id": user.uid, 
-      "userName": user.email,
-      "isTeacher": false
-    };
-    HttpClient httpClient = new HttpClient();
-    HttpClientRequest request = await httpClient.postUrl(Uri.parse(url));
-    request.headers.set('content-type', 'application/json');
-    request.add(utf8.encode(json.encode(body)));
-    HttpClientResponse response = await request.close();
-    var reply = await response.transform(utf8.decoder).join();
-    httpClient.close();
-    return reply;
-  }
+  } 
 }

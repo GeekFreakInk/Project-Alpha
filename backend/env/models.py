@@ -14,11 +14,13 @@ class User(db.Model):
     id = db.Column(db.String(), primary_key=True)
     userName = db.Column(db.String(), unique=True)
     isTeacher = db.Column(db.Boolean(), default=False)
+    isAdmin = db.Column(db.Boolean(), default=False)
 
-    def __init__(self, id, userName, isTeacher):
+    def __init__(self, id, userName, isTeacher, isAdmin):
         self.id = id,
         self.userName = userName
         self.isTeacher = isTeacher
+        self.isAdmin = isAdmin
 
     def __repr__(self):
         return "<id {}>".format(self.id)
@@ -27,6 +29,8 @@ class User(db.Model):
         return{
             "id" : self.id,
             "userName" : self.userName,
-            "isTeacher" : self.isTeacher
+            "isTeacher" : self.isTeacher,
+            "isAdmin" : self.isAdmin
         }
+    
 
