@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
 
+
 class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

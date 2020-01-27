@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../shared/constants.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
-import 'package:studybuddy_mobile/screens/navigationHeader/navigationDrawer.dart';
+import 'package:studybuddy_mobile/screens/navigationDrawer/navigationDrawer.dart';
 import 'containers/home.dart';
 import 'containers/studybuddies.dart';
 import 'containers/courses.dart';
