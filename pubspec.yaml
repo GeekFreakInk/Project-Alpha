@@ -14,7 +14,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -22,9 +22,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   http: ^0.12.0+2
+  webview_flutter: ^0.3.19+5
   permission_handler: '^4.2.0+hotfix.2'
   geolocator: ^5.2.0
   rflutter_alert:
+  postgres: ^2.1.0
 
   firebase_messaging: ^5.1.0
   firebase_auth: ^0.15.3
@@ -61,6 +63,7 @@ flutter:
     - locales/zh.json
     - locales/pl.json
     - locales/nl.json
+    - lib/screens/navigationScreens/exploreWidgets/webViews.json
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

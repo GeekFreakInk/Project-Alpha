@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -24,7 +23,7 @@ class AppLocalizations {
       await rootBundle.loadString('locales/${locale.languageCode}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
     
-  
+    
     _localizedGroup = jsonMap.map((group, keys){
       _localizedStrings = jsonMap[group].map((key, value){
         return MapEntry(key, value);

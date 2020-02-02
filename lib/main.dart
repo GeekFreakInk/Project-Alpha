@@ -9,6 +9,7 @@ import 'package:studybuddy_mobile/models/user.dart';
 
 void main() => runApp(App()); 
 
+
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -40,11 +41,13 @@ class App extends StatelessWidget {
               supportedLocale.countryCode == locale.countryCode){
                 return supportedLocale;
               } 
-            }
-            return supportedLocales.first;
+            } 
           }
+          return supportedLocales.first;
         },
       ),
     );
   }
+
 }
+

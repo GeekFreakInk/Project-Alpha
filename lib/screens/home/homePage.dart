@@ -43,13 +43,13 @@ class HomePage extends StatelessWidget {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: AppLocalizations.of(context).translate("home_"),
+                text: /*AppLocalizations.of(context).translate("home_")*/"Overview",
               ),
               Tab(
-                text: AppLocalizations.of(context).translate("course_"),
+                text: /*AppLocalizations.of(context).translate("course_")*/ "Permissions",
               ),
               Tab(
-                text: AppLocalizations.of(context).translate("studyBuddies_"),
+                text: /*AppLocalizations.of(context).translate("studyBuddies_")*/ "Documentation",
               )
             ],
           ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:studybuddy_mobile/shared/constants.dart';
 import '../../shared/constants.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
+
 
 class NavigationDrawer extends StatelessWidget {
   @override
@@ -18,17 +20,17 @@ class NavigationDrawer extends StatelessWidget {
                 //if already on home, just pull back drawer
                 leading: Icon(Icons.home),
                 title: Text(AppLocalizations.of(context).translate("home_")),
-                onTap: () => Navigator.pushNamed(context, homeRoute),
+                onTap: () {Navigator.pop(context); Navigator.pushNamed(context, homeRoute);}
               ),
               ListTile(
                 leading: Icon(Icons.group),
                 title: Text(AppLocalizations.of(context).translate("findSB_")),
-                onTap: () => Navigator.pushNamed(context, studyBuddyRoute),
+                onTap: () {Navigator.pop(context); Navigator.pushNamed(context, studyBuddyRoute);}
               ),
               ListTile(
                 leading: Icon(Icons.school),
                 title: Text(AppLocalizations.of(context).translate("privateLessons_")),
-                onTap: () => Navigator.pushNamed(context, privateLessonsRoute),
+                onTap: () {Navigator.pop(context);  Navigator.pushNamed(context, privateLessonsRoute);}
               ),
               new Divider(height: 14.0, color: Colors.grey, indent: 15, endIndent: 15,),
               Align(
@@ -40,7 +42,7 @@ class NavigationDrawer extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.category),
                 title: Text(AppLocalizations.of(context).translate("math_")),
-                //onTap: () => Navigator.pushNamed(context, '/'),
+                onTap: () => Navigator.pushNamed(context, mathRoute),
               ),
               Container(
                 color: Colors.grey[200],
@@ -56,13 +58,18 @@ class NavigationDrawer extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.settings),
                 title: Text(AppLocalizations.of(context).translate("settings_")),
-                onTap: () => Navigator.pushNamed(context, settingsRoute),                
+                onTap: () { Navigator.pop(context); Navigator.pushNamed(context, settingsRoute);},                
+              ),
+              ListTile(
+                leading: Icon(Icons.archive),
+                title: Text(AppLocalizations.of(context).translate("widgetsRepository_")),
+                //onTap: () { Navigator.pop(context); Navigator.pushNamed(context, widgetsRepositoryRoute);},                
               ),
              
               ListTile(
                 leading: Icon(Icons.feedback),
                 title: Text(AppLocalizations.of(context).translate("feedback_")),
-                onTap: () => Navigator.pushNamed(context, feedbackRoute),
+                onTap: ()  {Navigator.pop(context); Navigator.pushNamed(context, feedbackRoute);}
               )
             ],
           ),

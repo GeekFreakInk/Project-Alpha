@@ -1,11 +1,8 @@
-import 'dart:async';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:io' show Platform;
 
-import 'package:rflutter_alert/rflutter_alert.dart';
+
+
 
 class Home extends StatefulWidget{
 
@@ -14,59 +11,35 @@ class Home extends StatefulWidget{
 
 }
 
-
 class _HomeState extends State<Home>{
-  /* PUSH NOTIFICATIONS*/
-  final Firestore _db = Firestore.instance;
-  final FirebaseMessaging _fcm = FirebaseMessaging();
-  StreamSubscription iosSubscription;
+  //App blueprint specific
+  List<List<String>> myList =[["Permissions", "lib/screens/home/containers/courses.dart"], 
+  ["WebViews", "lib/screens/navigationScreens/exploreWidgets/explore_math.dart"],
+  ["Authentication", "lib/screens/authenticate/authenticate.dart"], ["Localization", "app_localization.dart"], 
+  ["API Calls", "lib/screens/authenticate/register.dart"],
+  ["Widget repository", "lib/screens/navigationScreens/widgetsRepository.dart"], 
+  ["Statefull Widgets","lib/screens/navigationScreens/settings.dart"]];
+
   @override
-  void initState(){
-    super.initState();
-    if(Platform.isIOS){{
-      iosSubscription = _fcm.onIosSettingsRegistered.listen((data){
-        //Save the token OR subscribe to a topic here
-      });
-      _fcm.requestNotificationPermissions(IosNotificationSettings());
-      
-    }
-    _fcm.configure(
-      onMessage: (Map<String, dynamic> message)async{
-        print("onMessage: $message");
-        showDialog(
-          context: context, 
-          builder: (context) => AlertDialog(
-            content: ListTile(
-              title: Text(message['notification']['title']),
-              subtitle: Text(message['notification']['body']),
+  Widget build(BuildContext context){
+    return  Scaffold(
+      body:  GridView.count(
+        crossAxisCount: 2,
+        children:  List<Widget>.generate(6, (index) {
+          return  GridTile(
+            child:  Card(
+              color: Colors.deepOrange.shade400,
+              child:  ListView(
+                children:<Widget>[
+                SizedBox(height: 50),
+                Center(child:Text('${myList[index][0]}'),),
+                Center(child: Text('fil: ${myList[index][1]}', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold),),)
+              ]),
             ),
-            actions: <Widget>[
-              FlatButton(child: Text("Ok"), onPressed: ()=> Navigator.of(context).pop(),),
-            ],
-          ), 
-        );
-      },
-      onLaunch: (Map<String, dynamic> message) async{
-        print("onLaunch:  $message");
-        //TODO
-      },
-      onResume: (Map<String, dynamic> message) async{
-        print("onResume: $message");
-        //TODO 
-      }
-      );
-    }
-  } 
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      //https://www.youtube.com/watch?v=7iO2WqaA6oM --> Alert Dialogs
-      child: RaisedButton(child: Text("Alert box"), onPressed: ()=> Alert(context: context, title: "rflutter_alert", 
-      desc: "This is a description",
-      buttons: [
-        DialogButton(child: Text("subscribe: finnish_profile"), onPressed:() =>  _fcm.subscribeToTopic('finnish_profile')),
-        DialogButton(child: Text("unsubscribe: finnish_profile"), onPressed: ()=> _fcm.unsubscribeFromTopic('finnish_profile')),
-      ]).show()),
+          );
+        }),
+      ),
     );
   }
+  
 }

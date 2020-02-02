@@ -1,0 +1,13 @@
+{
+    
+    "Math" : {
+        "nb" : "https://ndla.no/nb/", 
+        "en" : "https://nb.khanacademy.org/"
+    } ,
+    
+    "Languages" : {
+        "nb": "https://ndla.no/nb/",
+        "en" : "https://nb.khanacademy.org/"
+    }
+       
+}
