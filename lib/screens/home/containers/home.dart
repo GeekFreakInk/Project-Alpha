@@ -18,14 +18,15 @@ class _HomeState extends State<Home>{
   ["Authentication", "lib/screens/authenticate/authenticate.dart"], ["Localization", "app_localization.dart"], 
   ["API Calls", "lib/screens/authenticate/register.dart"],
   ["Widget repository", "lib/screens/navigationScreens/widgetsRepository.dart"], 
-  ["Statefull Widgets","lib/screens/navigationScreens/settings.dart"]];
+  ["Statefull Widgets","lib/screens/navigationScreens/settings.dart"],
+  ["Shared Prefrences","lib/screens/navigationScreens/settings.dart"]];
 
   @override
   Widget build(BuildContext context){
     return  Scaffold(
       body:  GridView.count(
         crossAxisCount: 2,
-        children:  List<Widget>.generate(6, (index) {
+        children:  List<Widget>.generate(8, (index) {
           return  GridTile(
             child:  Card(
               color: Colors.deepOrange.shade400,

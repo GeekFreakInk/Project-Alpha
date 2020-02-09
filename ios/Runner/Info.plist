@@ -41,7 +41,17 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>io.flutter.embedded_views_preview</key>
+    <string>YES</string>
 	<key>NSLocationWhenInUseUsageDescription<key/>
 	<string>I need location permission when in use. </string>
+	<key>NSCameraUsageDescription</key>
+	<string>I need camera persimmison</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>I need permission to access photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>I need permission to save photos to library</string>
+	<key>NSCalendarUsageDescription</key>
+	<string>I need permission to access your calenda</string>
 </dict>
 </plist>

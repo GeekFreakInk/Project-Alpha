@@ -63,7 +63,7 @@ class NavigationDrawer extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.archive),
                 title: Text(AppLocalizations.of(context).translate("widgetsRepository_")),
-                //onTap: () { Navigator.pop(context); Navigator.pushNamed(context, widgetsRepositoryRoute);},                
+                onTap: () { Navigator.pop(context); Navigator.pushNamed(context, widgetsRepositoryRoute);},                
               ),
              
               ListTile(

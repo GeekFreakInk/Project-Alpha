@@ -9,19 +9,28 @@ class Widgets extends StatelessWidget {
   final FirebaseMessaging _fcm = FirebaseMessaging();
   @override
   Widget build(BuildContext context) {
-    return Center(
-      //https://www.youtube.com/watch?v=7iO2WqaA6oM --> Alert Dialogs
-      child: RaisedButton(child: Text("Alert box"), onPressed: ()=> Alert(context: context, title: "rflutter_alert", 
-      desc: "This is a description",
-      buttons: [
-        DialogButton(child: Text("subscribe: finnish_profile"), onPressed:() =>  _fcm.subscribeToTopic('finnish_profile')),
-        DialogButton(child: Text("unsubscribe: finnish_profile"), onPressed: ()=> _fcm.unsubscribeFromTopic('finnish_profile')),
-      ]).show()),
-    );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Widget Repository"),
+      ),
+      body: ListView( 
+        children: <Widget>[SizedBox(height: 50, child: Center(child:Text("Small widgets")),),Row(
+      children: <Widget>[
+        Column(children: <Widget>[
+        //https://www.youtube.com/watch?v=7iO2WqaA6oM --> Alert Dialogs 
+        RaisedButton(child: Text("Alert box"), onPressed: ()=> Alert(context: context, title: "rflutter_alert", 
+        desc: "This is a description",
+        buttons: [
+          DialogButton(child: Text("subscribe: finnish_profile"), onPressed:() =>  _fcm.subscribeToTopic('finnish_profile')),
+          DialogButton(child: Text("unsubscribe: finnish_profile"), onPressed: ()=> _fcm.unsubscribeFromTopic('finnish_profile')),
+        ]).show()),
+        ],)
+      ],
+    )]));
   }
 }
 /* 
-/* PUSH NOTIFICATIONS*/
+  *PUSH NOTIFICATIONS*
   final Firestore _db = Firestore.instance;
   final FirebaseMessaging _fcm = FirebaseMessaging();
   StreamSubscription iosSubscription;
