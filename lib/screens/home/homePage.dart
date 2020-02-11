@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/smallWidgets/header.dart';
 import '../../shared/constants.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
 import 'package:studybuddy_mobile/screens/navigationDrawer/navigationDrawer.dart';
@@ -26,19 +27,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(AppLocalizations.of(context).translate("home_")),
           actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.notifications),
-              onPressed: () {
-                Navigator.pushNamed(context, notisRoute);
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.person),
-              onPressed: () {
-                Navigator.pushNamed(context, profileRoute);
-              
-              },
-            ),
+            Header(),
           ],
           bottom: TabBar(
             tabs: <Widget>[

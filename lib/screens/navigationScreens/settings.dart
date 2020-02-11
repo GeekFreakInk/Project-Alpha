@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:postgres/postgres.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
 import "package:shared_preferences/shared_preferences.dart";
+import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/mediumWidgets/settings.dart';
 
-
-
-class Settings extends StatefulWidget {
+class SettingsPage extends StatefulWidget {
   @override
-  _SettingsState createState() => new _SettingsState();  
+  _SettingsPageState createState() => new _SettingsPageState();  
   
 }
 
-class _SettingsState extends State<Settings>{
+class _SettingsPageState extends State<SettingsPage>{
   bool isAdmin = false;
   String _haveStarted3Times = '';
   final FirebaseAuth auth = FirebaseAuth.instance;
@@ -33,16 +32,24 @@ class _SettingsState extends State<Settings>{
 
   @override
   Widget build(BuildContext context) {
-    if(isAdmin && isAdmin != null){
+    if(isAdmin != null){
      return Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.of(context).translate("settings_")),
         ),
-        body: Container(
-            child: Center(
-          child: Text(_haveStarted3Times),
-      ))
-    );
+        body: ListView(children: <Widget>[
+          if(isAdmin)
+            Container(
+            margin: EdgeInsets.all(10),
+            child: ListTile(leading: Icon(Icons.edit_attributes),title: Text("Admin panel"), onTap: (){},),
+            ),
+          Container(
+          margin: EdgeInsets.all(35),
+          child: Settings(),
+          ),
+         
+          
+        ]));
     }
     return Scaffold(
         appBar: AppBar(
@@ -65,6 +72,10 @@ class _SettingsState extends State<Settings>{
       setState(() {
         isAdmin = true;
       });
+    }else if(result[0][3] == false){
+        setState(() {
+          isAdmin = false;
+    });
     }
     await connection.close(); //Always close the connection after query is done  
   }

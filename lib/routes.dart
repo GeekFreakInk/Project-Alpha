@@ -22,7 +22,7 @@ class Router {
       case notisRoute:
         return MaterialPageRoute(builder: (_) => Notis());
       case settingsRoute:
-        return MaterialPageRoute(builder: (_) => Settings());
+        return MaterialPageRoute(builder: (_) => SettingsPage());
       case widgetsRepositoryRoute:
         return MaterialPageRoute(builder: (_) => Widgets());
       case feedbackRoute:
