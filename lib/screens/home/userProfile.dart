@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:postgres/postgres.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/mediumWidgets/profilePictureStandard.dart';
 import 'package:studybuddy_mobile/services/auth.dart';
+import 'package:studybuddy_mobile/shared/constants.dart';
 
 
 
@@ -61,18 +65,22 @@ class _ProfileState extends State<Profile>{
       ),
       body: ListView(
             children: <Widget>[
+              Center(child: Text(userEmail, style: TextStyle(fontSize: 30),),),
+              Divider(indent: 50, endIndent: 50, color: Colors.grey, thickness: 1.5,),
+              ProfilePictureStandard(),
+              SizedBox(height: 50,),
               Center(child: Text("Er admin?")),
-              Center(child: Text(isAdmin.toString() ?? "loading"),),
+              Center(child: Text(isAdmin.toString() ?? "loading", style: TextStyle(fontWeight: FontWeight.bold),),),
               Center(child: Text("UID: " + uid ?? "loading")),
-              SizedBox(height: 50),
+              SizedBox(height: 100),
               Center(child: RaisedButton(child: Text("Logut"), onPressed: () async {
             await _auth.signOut();
+            Navigator.popAndPushNamed(context, homeRoute);
           },),)
             ]
         ));
     }
   }
-
   void _update(dynamic status){
     setState(() {
       result = true;

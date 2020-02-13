@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/mediumWidgets/feedback.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/mediumWidgets/profilePictureStandard.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/mediumWidgets/settings.dart';
 
 
@@ -14,11 +15,13 @@ class MediumWidgets extends StatelessWidget{
           child:  Wrap(children: <Widget>[
             Text("Settings"),
             Settings(),
-            Text("FeedBack"),
+            Divider(thickness: 3, color: Colors.black38,),
+            Text("FeedBackWidget"),
             FeedbackWidget(),
-            /* FeedbackWidget(filledStar: Icon(Icons.star, color: Colors.amber,),
-            unfilledStar: Icon(Icons.star_border, color: Colors.grey,)), */
+            Divider(thickness: 3, color: Colors.black38,),
+            Text("ProfilePictureStandard"),
+            ProfilePictureStandard(),
         ],)
-    )]);
+    ), SizedBox(height: 100),]);
   }
 }

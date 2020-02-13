@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/smallWidgets/header.dart';
-import '../../shared/constants.dart';
 import 'package:studybuddy_mobile/app_localization.dart';
 import 'package:studybuddy_mobile/screens/navigationDrawer/navigationDrawer.dart';
 import 'containers/home.dart';

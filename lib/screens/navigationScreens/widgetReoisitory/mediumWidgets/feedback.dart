@@ -20,7 +20,6 @@ class FormData extends StatelessWidget{
               return IconButton(
                 onPressed: onChanged != null ? (){
                   onChanged(value == index +1 ? index : index +1);
-                  print("Trykk!");
                 } : null,
                 color: index < value ? color : null,
                 iconSize: size,

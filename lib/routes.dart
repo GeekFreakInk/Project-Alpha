@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/adminPanel.dart';
 import 'shared/constants.dart';
 import 'package:studybuddy_mobile/screens/home/notification.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/studyBuddy.dart';
@@ -23,6 +24,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => Notis());
       case settingsRoute:
         return MaterialPageRoute(builder: (_) => SettingsPage());
+      case adminPanelRoute:
+        return MaterialPageRoute(builder: (_) => AdminPanel());
       case widgetsRepositoryRoute:
         return MaterialPageRoute(builder: (_) => Widgets());
       case feedbackRoute:
