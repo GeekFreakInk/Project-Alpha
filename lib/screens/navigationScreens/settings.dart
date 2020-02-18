@@ -76,15 +76,19 @@ class _SettingsPageState extends State<SettingsPage>{
         setState(() {
           isAdmin = true;
         });
-      }else if(result[0][3] == false){
+      }else{
         setState(() {
           isAdmin = false;
         });
       }
+      canDebug();
     }catch(e){
-      print("No user is logged in");
+     setState(() {
+        isAdmin = false;
+        hasDebugRights = false;
+      });
     }
-    canDebug();
+    
     await connection.close(); //Always close the connection after query is done  
   }
 

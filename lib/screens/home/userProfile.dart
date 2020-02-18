@@ -1,10 +1,9 @@
-import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:postgres/postgres.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/widgetReoisitory/mediumWidgets/profilePictureStandard.dart';
 import 'package:studybuddy_mobile/services/auth.dart';
+import 'package:studybuddy_mobile/services/usersAPI.dart';
 import 'package:studybuddy_mobile/shared/constants.dart';
 
 
@@ -31,14 +30,21 @@ class _ProfileState extends State<Profile>{
     await connection.open();
     dynamic result = await connection.query("SELECT * FROM users WHERE id = '${user.uid}'");
     bool _isAdmin;
-    if(result[0][3] == true){
+   
+    try{
+      if(result[0][3] == true){
       _isAdmin = true;
+      }
+    }catch(e){
+      registerUser(user);
     }
+    
     setState(() {
         userEmail = user.email;
         uid = user.uid;
         isAdmin = _isAdmin;
     });
+    connection.close();
   }
 
   @override
@@ -56,8 +62,9 @@ class _ProfileState extends State<Profile>{
   @override
   Widget build(BuildContext context) {
     if (result == null){
-      //This is what we shpw while we're loading
-      return new Container();
+      return new Container(
+        child: CircularProgressIndicator(backgroundColor: Colors.white,),
+      );
     }else{
       return Scaffold(
       appBar: AppBar(
@@ -73,6 +80,7 @@ class _ProfileState extends State<Profile>{
               Center(child: Text(isAdmin.toString() ?? "loading", style: TextStyle(fontWeight: FontWeight.bold),),),
               Center(child: Text("UID: " + uid ?? "loading")),
               SizedBox(height: 100),
+              Center(child: RaisedButton(child: Text("register bruker"), onPressed: () {Navigator.pushNamed(context, registerUserRoute);}),),
               Center(child: RaisedButton(child: Text("Logut"), onPressed: () async {
             await _auth.signOut();
             Navigator.popAndPushNamed(context, homeRoute);

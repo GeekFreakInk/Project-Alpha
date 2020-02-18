@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/adminPanel.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/adminPanel/Users/allUsers.dart';
+import 'package:studybuddy_mobile/screens/navigationScreens/registerUser.dart';
 import 'shared/constants.dart';
 import 'package:studybuddy_mobile/screens/home/notification.dart';
 import 'package:studybuddy_mobile/screens/navigationScreens/studyBuddy.dart';
@@ -34,6 +36,12 @@ class Router {
         return MaterialPageRoute(builder: (_) => StudyBuddy());
       case privateLessonsRoute:
         return MaterialPageRoute(builder: (_) => PrivateLessons());
+
+      case registerUserRoute:
+        return MaterialPageRoute(builder: (_) => RegisterUser());
+
+      case usersRoute:
+        return MaterialPageRoute(builder: (_) => AllUsers());
 
 
       case mathRoute:

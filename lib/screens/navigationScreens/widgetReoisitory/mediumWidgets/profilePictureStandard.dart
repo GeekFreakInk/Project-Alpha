@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class ProfilePictureStandard extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Column(children: <Widget>[
       Align(alignment: Alignment.center,
        child: ClipRRect(

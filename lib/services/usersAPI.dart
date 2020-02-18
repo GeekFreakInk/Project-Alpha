@@ -7,7 +7,7 @@ Future registerUser(user) async{
       "id": user.uid, 
       "userName": user.email,
       "isTeacher": false,
-      "isAdmin" : true
+      "isAdmin" : false
     };
     HttpClient httpClient = new HttpClient();
     HttpClientRequest request = await httpClient.postUrl(Uri.parse(url));

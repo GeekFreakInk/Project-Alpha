@@ -30,8 +30,8 @@ class _SignInState extends State<SignIn> {
           child: Form(
             key: _formKey,
             child: Column(
-
               children: <Widget>[
+                Text("Husk å starte server!"),
                 TextFormField(
                   decoration: InputDecoration(
                     hintText: 'email',
