@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:studybuddy_mobile/routes.dart';
-import 'package:studybuddy_mobile/shared/constants.dart';
-import 'app_localization.dart';
-import 'package:studybuddy_mobile/services/auth.dart';
-import 'package:studybuddy_mobile/models/user.dart';
+import 'shared/routes.dart';
+import 'shared/routeConstants.dart';
+import 'shared/app_localization.dart';
+import 'services/auth.dart';
+import 'models/user.dart';
 
 void main() => runApp(App()); 
 

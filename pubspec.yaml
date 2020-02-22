@@ -65,7 +65,7 @@ flutter:
     - locales/zh.json
     - locales/pl.json
     - locales/nl.json
-    - lib/screens/navigationScreens/exploreWidgets/webViews.json
+    - lib/screens/authenticated/webViews/resources.json
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

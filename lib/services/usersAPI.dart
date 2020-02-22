@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:postgres/postgres.dart';
+
 Future registerUser(user) async{
     var url = "http://10.0.2.2:5000/api/register";
     Map body = {
@@ -19,6 +21,26 @@ Future registerUser(user) async{
     return reply;
 }
 
-Future fetchUsers(user) async{
-  //var url = "http://10.0.2.2:5000/api/register";
+//Update User
+
+
+
+//Delete User
+
+
+//Read User
+fetchUsers() async{
+  var connection = new PostgreSQLConnection("10.0.2.2", 5432, "study_app", username: "postgres", password: "psqlGFdb");
+  await connection.open();
+  dynamic result = await connection.query("SELECT * FROM users");
+  connection.close();
+  return result;
+}
+
+fetchUser(user) async{
+  var connection = new PostgreSQLConnection("10.0.2.2", 5432, "study_app", username: "postgres", password: "psqlGFdb");
+  await connection.open();
+  dynamic result = await connection.query("SELECT * FROM users WHERE id = '${user.uid}'");
+  connection.close();
+  return result;
 }

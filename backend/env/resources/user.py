@@ -27,4 +27,11 @@ class User(Resource):
             "isTeacher" : self.isTeacher,
             "isAdmin" : self.isAdmin
         }
+        
+    def get(self):
+        users = User.query.all()
+        user_list = []
+        for i in range(0,len(users)):
+            user_list.append(users[i].serialize())
+        return {"status": str(user_list)}, 200
 
